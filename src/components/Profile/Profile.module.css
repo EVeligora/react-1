@@ -1,0 +1,8 @@
+.content {
+  padding: 20px;
+  grid-area: c;
+
+  background-color: khaki;
+}
+
+.content img {}
