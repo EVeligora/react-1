@@ -1,5 +1,6 @@
 .app-wrapper {
   display: grid;
+  min-height: 800px;
   width: 1200px;
   margin: 0 auto;
 
@@ -9,4 +10,10 @@
   grid-template-rows: 60px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 10px;
+}
+
+.app-wrapper-content {
+  padding: 20px;
+
+  background-color: khaki;
 }
