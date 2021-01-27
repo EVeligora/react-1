@@ -4,9 +4,8 @@ import s from "./MyPosts.module.css";
 const MyPosts = () => {
   return (
     <div className={s.posts}>
-      <Post />
-      <Post />
-      <Post />
+      <Post message="Hi, how are you?" likesСount="30" />
+      <Post message="It's my first post" likesСount="40" />
     </div>
   );
 };

@@ -1,14 +1,15 @@
 import s from "./Post.module.css";
 
-const Post = () => {
+const Post = (props) => {
   return (
     <div>
       <div></div>
       <div className={s.item}>
         <img src="https://mtdata.ru/u14/photoFB6E/20684325461-0/original.jpg" />
-        Post 1
+        {props.message}
         <div>
           <span>like</span>
+          {props.likesСount}
         </div>
       </div>
     </div>
@@ -16,3 +17,4 @@ const Post = () => {
 };
 
 export default Post;
+ 
