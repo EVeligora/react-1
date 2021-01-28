@@ -2,7 +2,7 @@ import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
 
 const MyPosts = () => {
-  let messages = [
+  let posts = [
     {
       id: 1,
       message: 'Hi, how are you?',
@@ -15,7 +15,7 @@ const MyPosts = () => {
     }
   ];
 
-  let messageElements = messages.map(m => <Post message={m.message} likesСount={m.likesСount} />)
+  let messageElements = posts.map(m => <Post message={m.message} likesСount={m.likesСount} />)
 
   return (
     <div className={s.posts}>

@@ -3,3 +3,7 @@
 
   grid-template-columns: 3fr 10fr;
 }
+
+.messages {
+  color: rgb(67, 67, 126);
+}
