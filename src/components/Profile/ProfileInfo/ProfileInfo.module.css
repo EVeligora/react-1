@@ -1,0 +1,10 @@
+.profile_bg {
+  height: 200px;
+  width: 100%;
+}
+
+.profile_bg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
