@@ -4,6 +4,59 @@
   grid-template-columns: 3fr 10fr;
 }
 
-.messages {
+.messages_list {
+  width: 300px;
+}
+
+.messages_item {
+  display: flex;
+  padding: 10px 20px;
+  margin-bottom: 20px;
   color: rgb(67, 67, 126);
+  width: fit-content;
+
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.messages_item:last-child {
+  margin-bottom: 0;
+}
+
+.messages_item:nth-child(even) {
+  margin-left: auto;
+}
+
+.dialog_item {
+  margin-bottom: 20px;
+}
+
+.dialog_item:last-child {
+  margin-bottom: 0;
+}
+
+.dialog_item a {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+  line-height: 1;
+}
+
+.dialog_item a:hover {
+  text-decoration: underline;
+}
+
+.dialog_item img {
+  margin-right: 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
