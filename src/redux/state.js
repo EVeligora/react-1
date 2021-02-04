@@ -57,6 +57,19 @@ let state = {
       },
     ],
   },
+  sidebar: {
+    friends: [
+      {
+        name: 'Igor'
+      },
+      {
+        name: 'Serg'
+      },
+      {
+        name: 'Yura'
+      }
+    ]
+  }
 };
 
 export default state;

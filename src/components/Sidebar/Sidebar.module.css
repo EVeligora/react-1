@@ -1,8 +1,12 @@
-.nav {
+.sidebar {
   padding: 20px;
   grid-area: n;
 
   background-color: indianred;
+}
+
+.item+.item {
+  margin-top: 10px;
 }
 
 .item a {
