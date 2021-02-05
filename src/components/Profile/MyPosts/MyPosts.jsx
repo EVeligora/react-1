@@ -1,32 +1,27 @@
+import React from 'react';
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
 
 const MyPosts = (props) => {
-  // let posts = [
-  //   {
-  //     id: 1,
-  //     message: 'Hi, how are you?',
-  //     likesСount: '48'
-  //   },
-  //   {
-  //     id: 2,
-  //     message: 'It\'s my first post',
-  //     likesСount: '56'
-  //   }
-  // ];
- 
+  
   let messageElements = props.posts.map((m) => (
     <Post message={m.message} likesСount={m.likesСount} />
   ));
+
+  let newPostEl = React.createRef();
+  let addPost = () => {
+    let text = newPostEl.current.value;
+    props.addPost(text);
+  }
 
   return (
     <div className={s.posts}>
       <form className={s.posts_form} action="">
         <div>
-          <textarea placeholder="Write something..."></textarea>
+          <textarea ref={newPostEl}></textarea>
         </div>
         <div>
-          <button>Send</button>
+          <button onClick= { addPost }>Send</button>
         </div>
       </form>
       {/* <Post message={messagesData[0].message} likesСount={messagesData[0].likesСount} />
