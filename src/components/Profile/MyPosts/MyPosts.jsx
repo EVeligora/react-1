@@ -12,6 +12,7 @@ const MyPosts = (props) => {
   let addPost = () => {
     let text = newPostEl.current.value;
     props.addPost(text);
+    newPostEl.current.value = "";
   }
 
   return (
@@ -21,7 +22,7 @@ const MyPosts = (props) => {
           <textarea ref={newPostEl}></textarea>
         </div>
         <div>
-          <button onClick= { addPost }>Send</button>
+          <button type="button" onClick= { addPost }>Send</button>
         </div>
       </form>
       {/* <Post message={messagesData[0].message} likesСount={messagesData[0].likesСount} />
