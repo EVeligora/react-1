@@ -16,7 +16,7 @@ const MyPosts = (props) => {
   let onPostChange = () => {
     let text = newPostEl.current.value;
     props.updPostText(text);
-  };
+  };      
 
   return (
     <div className={s.posts}>
@@ -34,11 +34,7 @@ const MyPosts = (props) => {
           </button>
         </div>
       </form>
-      <div className={s.post_list}>
-        {/* <Post message={messagesData[0].message} likesСount={messagesData[0].likesСount} />
-      <Post message={messagesData[1].message} likesСount={messagesData[1].likesСount} /> */}
-        {messageElements}
-      </div>
+      <div className={s.post_list}>{messageElements}</div>
     </div>
   );
 };

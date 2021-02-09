@@ -62,6 +62,8 @@ let state = {
         message: "Fine, thanks",
       },
     ],
+
+    newMessageText: 'Yo, dude'
   },
   sidebar: {
     friends: [
@@ -95,6 +97,24 @@ export let updPostText = (newText) => {
   state.profilePage.newPostText = newText;
   rerenderEntireTree(state);
  
+};
+
+export let addMessage = () => {
+  let newMessage = {
+    id: 5,
+    message: state.dialogsPage.newMessageText,
+  };
+
+  state.dialogsPage.messages.push(newMessage);
+  
+  state.dialogsPage.newMessageText = '';
+
+  rerenderEntireTree(state);
+};
+
+export let updMessageText = (newText) => {
+  state.dialogsPage.newMessageText = newText;
+  rerenderEntireTree(state);
 };
 
 export default state;

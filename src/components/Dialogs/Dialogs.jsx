@@ -1,30 +1,42 @@
-import React from 'react';
+import React from "react";
 import DialogItem from "./DialogItem/DialogItem";
 import s from "./Dialogs.module.css";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-  let dialogElements = props.state.dialogs.map((d) => (
+  let dialogElements = props.dialogsPage.dialogs.map((d) => (
     <DialogItem id={d.id} name={d.name} img={d.img} />
   ));
-  let messageElements = props.state.messages.map((m) => (
+  let messageElements = props.dialogsPage.messages.map((m) => (
     <Message id={m.id} message={m.message} />
   ));
   let newMessageEl = React.createRef();
   let addMessage = () => {
+    // let text = newMessageEl.current.value;
+    props.addMessage();
+  };
+
+  let onMessageChange = () => {
     let text = newMessageEl.current.value;
-    alert(text);
-  }
+    props.updMessageText(text);
+  };
 
   return (
     <div className={s.dialogs_wrap}>
       <div className={s.dialog_list}>{dialogElements}</div>
       <div className={s.messages}>
         <div className={s.messages_list}>{messageElements}</div>
-        <div className={s.messages_form}>
-          <textarea ref = {newMessageEl} className={s.messages_textarea}></textarea>
-          <button onClick={addMessage}>Send</button>
-        </div>
+        <form className={s.messages_form} action="">
+          <textarea
+            onChange={onMessageChange}
+            ref={newMessageEl}
+            value={props.newMessageText}
+            className={s.messages_textarea}
+          />
+          <button type="button" onClick={addMessage}>
+            Send
+          </button>
+        </form>
       </div>
     </div>
   );
