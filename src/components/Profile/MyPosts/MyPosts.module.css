@@ -5,3 +5,8 @@
 .posts_form textarea {
   padding: 10px;
 }
+
+.post_list {
+  display: flex;
+  flex-direction: column-reverse;
+}
