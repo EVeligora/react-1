@@ -1,22 +1,24 @@
 import React from "react";
 import Post from "./Post/Post";
 import s from "./MyPosts.module.css";
+import {
+  addPostActionCreator,
+  updatePostTextActionCreator,
+} from "../../../redux/state";
 
 const MyPosts = (props) => {
-  debugger;
   let messageElements = props.posts.map((m) => (
     <Post message={m.message} likesСount={m.likesСount} />
   ));
 
   let newPostEl = React.createRef();
   let addPost = () => {
-    props.dispatch({ type: "ADD-POST" });
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
     let text = newPostEl.current.value;
-    // props.updPostText(text);
-    let action = { type: "UPDATE-POST-TEXT", newText: text };
+    let action = updatePostTextActionCreator(text);
     props.dispatch(action);
   };
 
