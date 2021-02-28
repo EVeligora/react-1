@@ -85,9 +85,9 @@ let store = {
   _callSubscriber() { },
 
   getState() {
-
     return this._state;
   },
+
   subscriber(observer) {
     this._callSubscriber = observer;
   },
@@ -108,22 +108,22 @@ let store = {
   //   this._state.profilePage.newPostText = newText;
   //   this._callSubscriber(this._state);
   // },
-  addMessage() {
-    let newMessage = {
-      id: 5,
-      message: this._state.dialogsPage.newMessageText,
-    };
+  // addMessage() {
+  //   let newMessage = {
+  //     id: 5,
+  //     message: this._state.dialogsPage.newMessageText,
+  //   };
 
-    this._state.dialogsPage.messages.push(newMessage);
+  //   this._state.dialogsPage.messages.push(newMessage);
 
-    this._state.dialogsPage.newMessageText = "";
+  //   this._state.dialogsPage.newMessageText = "";
 
-    this._callSubscriber(this._state);
-  },
-  updMessageText(newText) {
-    this._state.dialogsPage.newMessageText = newText;
-    this._callSubscriber(this._state);
-  },
+  //   this._callSubscriber(this._state);
+  // },
+  // updMessageText(newText) {
+  //   this._state.dialogsPage.newMessageText = newText;
+  //   this._callSubscriber(this._state);
+  // },
 
   dispatch(action) {
     this._state.profilePage = profileReducer(this._state.profilePage, action);
