@@ -4,7 +4,7 @@ import s from "./MyPosts.module.css";
 import {
   addPostActionCreator,
   updatePostTextActionCreator,
-} from "../../../redux/state";
+} from "../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
   let messageElements = props.posts.map((m) => (
