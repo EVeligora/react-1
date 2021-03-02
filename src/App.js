@@ -1,13 +1,14 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
-import Dialogs from "./components/Dialogs/Dialogs";
 import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Sidebar from "./components/Sidebar/Sidebar";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
+  //debugger;
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -17,10 +18,11 @@ const App = (props) => {
           <Route
             path="/dialogs"
             render={() => (
-              <Dialogs
-                dialogsPage={props.state.dialogsPage}
-                newMessageText={props.state.dialogsPage.newMessageText}
-                dispatch={props.dispatch}
+              <DialogsContainer
+                store={props.store}
+              // dialogsPage={props.state.dialogsPage}
+              // newMessageText={props.state.dialogsPage.newMessageText}
+              // dispatch={props.dispatch}
               />
             )}
           />
@@ -28,8 +30,8 @@ const App = (props) => {
             path="/profile"
             render={() => (
               <Profile
-                profilePage={props.state.profilePage}
-                dispatch={props.dispatch}
+                store={props.store}
+              //dispatch={props.dispatch}
               />
             )}
           />

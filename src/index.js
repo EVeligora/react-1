@@ -6,11 +6,11 @@ import "./index.css";
 import App from "./App";
 
 let rerenderEntireTree = (state) => {
-  debugger;
   ReactDOM.render(
     <React.StrictMode>
       <App
-        state={store.getState()}
+        store={store}
+        state={state}
         dispatch={store.dispatch.bind(store)}
       />
     </React.StrictMode>,
