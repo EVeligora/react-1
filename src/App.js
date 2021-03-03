@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
-  //debugger;
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -18,21 +18,13 @@ const App = (props) => {
           <Route
             path="/dialogs"
             render={() => (
-              <DialogsContainer
-                store={props.store}
-              // dialogsPage={props.state.dialogsPage}
-              // newMessageText={props.state.dialogsPage.newMessageText}
-              // dispatch={props.dispatch}
-              />
+              <DialogsContainer />
             )}
           />
           <Route
             path="/profile"
             render={() => (
-              <Profile
-                store={props.store}
-              //dispatch={props.dispatch}
-              />
+              <Profile/>
             )}
           />
           <Route path="/news" component={News} />
