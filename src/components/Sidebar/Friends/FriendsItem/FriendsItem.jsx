@@ -1,6 +1,6 @@
 import s from "../../Sidebar.module.css"
 
-const Friends_item = (props) => {
+const FriendsItem = (props) => {
   return (
     <li className={s.friends_item}>
       {props.name}
@@ -8,4 +8,4 @@ const Friends_item = (props) => {
   );
 };
 
-export default Friends_item;
+export default FriendsItem;

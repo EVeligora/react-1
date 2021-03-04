@@ -7,13 +7,13 @@ import Music from "./components/Music/Music";
 import Sidebar from "./components/Sidebar/Sidebar";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
-const App = (props) => {
+const App = () => {
 
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Sidebar state={props.state.sidebar} />
+        <Sidebar />
         <div className="app-wrapper-content">
           <Route
             path="/dialogs"

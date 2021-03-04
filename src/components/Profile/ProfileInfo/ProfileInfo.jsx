@@ -4,7 +4,7 @@ const ProfileInfo = () => {
   return (
     <div>
       <div className={s.profile_bg}>
-        <img src="https://cf.bstatic.com/images/hotel/max1024x768/228/228522693.jpg" />
+        <img src="https://cf.bstatic.com/images/hotel/max1024x768/228/228522693.jpg" alt=''/>
       </div>
       <div>ava + description</div>
     </div>

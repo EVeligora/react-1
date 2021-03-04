@@ -1,8 +1,10 @@
+import React from "react";
 import s from "../Sidebar.module.css";
-import Friends_item from "./Friends_item/Friends_item";
+import FriendsItem from "./FriendsItem/FriendsItem";
 
 const Friends = (props) => {
-  let friendsElements = props.state.map((f) => <Friends_item name={f.name} />);
+  //debugger;
+  let friendsElements = props.friends.map((f) => <FriendsItem name={f.name} />);
 
   return (
     <div className={s.friends}>
