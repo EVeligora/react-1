@@ -1,18 +1,5 @@
 import { connect } from "react-redux";
-import s from "../Sidebar.module.css";
 import Friends from "./Friends";
-import FriendsItem from "./FriendsItem/FriendsItem";
-
-// const Friends = (props) => {
-//   let friendsElements = props.state.map((f) => <FriendsItem name={f.name} />);
-
-//   return (
-//     <div className={s.friends}>
-//       <div className={s.friends_title}>Friends</div>
-//       <ul>{friendsElements}</ul>
-//     </div>
-//   );
-// };
 
 let mapStateToProps = (state) => {
   return {
@@ -20,11 +7,12 @@ let mapStateToProps = (state) => {
   }
 }
 
-let mapDispatchToProps = (dispatch) => {
+// let mapDispatchToProps = () => {
 
-}
+// }
 
-const FriendsContainer = connect(mapStateToProps, mapDispatchToProps)(Friends);
+
+const FriendsContainer = connect(mapStateToProps)(Friends);
 
 export default FriendsContainer;
 
