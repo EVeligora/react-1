@@ -4,7 +4,7 @@ import s from "../Sidebar.module.css"
 const Navbar = () => {
   return (
     <aside className={s.sidebar}>
-      <nav  className={s.nav}>
+      <nav className={s.nav}>
         <div className={`${s.item} ${s.active}`}>
           <NavLink to="/profile" activeClassName={s.active_mod}>
             Profile
@@ -13,6 +13,11 @@ const Navbar = () => {
         <div className={s.item}>
           <NavLink to="/dialogs" activeClassName={s.active_mod}>
             Messages
+          </NavLink>
+        </div>
+        <div className={s.item}>
+          <NavLink to="/users" activeClassName={s.active_mod}>
+            Users
           </NavLink>
         </div>
         <div className={s.item}>
@@ -27,7 +32,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div className="friends">
-        
+
       </div>
     </aside>
   );
